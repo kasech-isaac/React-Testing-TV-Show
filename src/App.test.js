@@ -5,7 +5,7 @@ import {fetchShow as mockFetchShow} from './api/fetchShow';
 jest.mock("./api/fetchShow")
 
 const episodesData=[];
-test("App fetches missions data from the api and renders it", async () => {
+test("App fetches", async () => {
     mockFetchShow.mockResolvedValueOnce(episodesData);
     const {getAllByTestId} = render(<App/>);
     const button =  getAllByTestId (/app/i)
